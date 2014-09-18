@@ -44,7 +44,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8610
-TARGET_KERNEL_CONFIG := cm_condor_defconfig
+TARGET_KERNEL_CONFIG := msm8610_mmi_defconfig
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags vmalloc=400M androidboot.write_protect=0
@@ -71,6 +71,8 @@ TARGET_POWERHAL_VARIANT := qcom
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 TARGET_USES_QCOM_BSP := true
 BOARD_USES_QCOM_HARDWARE := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
 # Enable WEBGL in WebKit
 ENABLE_WEBGL := true
