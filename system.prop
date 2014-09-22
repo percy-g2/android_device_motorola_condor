@@ -24,17 +24,6 @@ persist.radio.atfwd.start=false
 #
 persist.cne.feature=0
 
-# Skip /sys/power/wait_for_fb_* nodes and
-# force FB to be always on
-debug.sf.fb_always_on=1
-debug.composition.type=gpu
-debug.gralloc.map_fb_memory=0
-debug.hwc.dynThreshold=1.5
-dalvik.vm.heapsize=36m
-dev.pm.dyn_samplingrate=1
-
-ro.hdmi.enable=true
-
 #system props for the MM modules
 
 media.stagefright.enable-player=true
@@ -128,9 +117,6 @@ persist.dash.max.rep.bandwidth=4000000
 persist.dash.avsync.window.msec=100
 
 tunnel.audio.encode = false
-
-#use VERY_HIGH_QUALITY for audio resampler
-af.resampler.quality=4
 
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true

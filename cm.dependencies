@@ -4,10 +4,6 @@
     "target_path": "device/qcom/common"
   },
   {
-    "repository": "android_kernel_motorola_msm8610",
-    "target_path": "kernel/motorola/msm8610"
-  },
-  {
     "repository": "android_hardware_qcom_fm",
     "target_path": "hardware/qcom/fm"
   },

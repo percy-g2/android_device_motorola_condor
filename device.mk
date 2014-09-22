@@ -119,12 +119,43 @@ PRODUCT_PACKAGES += \
     power.msm8610 \
     liboverlay
 
+# QCOM Display
+PRODUCT_PACKAGES += \
+    libmemalloc \
+    libqdutils \
+    libtilerenderer
+
 # QRNG
 PRODUCT_PACKAGES += qrngp
 
 PRODUCT_PACKAGES += \
     audio.msm8610 \
-    audio_policy.msm8610
+    audio_policy.msm8610 \
+    libalsa-intf \
+    libaudioutils \
+    aplay \
+    amix \
+    arec \
+    alsaucm_test
+
+# VT_JNI
+PRODUCT_PACKAGES += \
+    libvt_jni \
+    libimscamera_jni
+
+# QCOM Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.fb_always_on=1 \
+    ro.hdmi.enable=true
+
+# QCOM Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.egl.hw=1 \
+    debug.sf.hw=1 \
+    debug.composition.type=dyn \
+    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.logs=0 \
+    debug.enabletr=0
 
 # Keystore
 PRODUCT_PACKAGES += keystore.msm8610
@@ -136,7 +167,10 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
+    tinycap \
     tinymix \
+    tinypcminfo \
+    tinyplay \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing
@@ -170,6 +204,21 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libOmxEvrcEnc \
     libOmxQcelp13Enc
+
+PRODUCT_PACKAGES += \
+    libdivxdrmdecrypt \
+    libdashplayer
+
+# QCOM
+PRODUCT_PROPERTY_OVERRIDES += \
+    com.qc.hardware=true
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    lpa.decode=true \
+    qcom.hw.aac.encoder=true \
+    af.resampler.quality=255 \
+    persist.audio.lowlatency.rec=false
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
@@ -321,8 +370,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_GMS_CLIENTID_BASE ?= android-motorola
 
 PRODUCT_COPY_FILES += \
-    kernel/motorola/msm8610/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    kernel/motorola/msm8610/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    kernel/motorola/msm8610/drivers/net/wireless/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    kernel/motorola/msm8610/drivers/net/wireless/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 # Inhert dalvik heap values from aosp
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
