@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2014 Team Gummy Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -87,8 +87,7 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
-# APP2sd
-TARGET_EXTERNAL_APPS = sdcard1
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

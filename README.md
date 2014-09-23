@@ -19,4 +19,4 @@ Camera  | 5 MP, 2592 х 1944 pixels
 
 ![Motorola E](https://camo.githubusercontent.com/65db99a8598e2e96a3b1e88f76020559ac23618c/687474703a2f2f63646e322e67736d6172656e612e636f6d2f76762f6269677069632f6d6f746f726f6c612d6d6f746f2d652e6a7067 "Motorola E")
 
-This branch is for building CyanogenMod 11.0 Firmware.
+This branch is for building Gummy Firmware.
