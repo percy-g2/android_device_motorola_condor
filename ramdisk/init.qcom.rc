@@ -590,29 +590,21 @@ on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
-on property:persist.radio.multisim.config=dsds
-    stop ril-daemon
-    start mmi-ril-daemon
-    start mmi-ril-daemon1
-
-on property:vold.decrypt=trigger_restart_framework
-    stop ril-daemon
-
-service mmi-ril-daemon /system/bin/rild
+service ril-daemon1 /system/bin/rild -c 1
     class main
-    socket rild stream 660 root radio
-    socket rild-debug stream 660 radio system
-    socket cutback stream 660 media radio
+    socket rild1 stream 660 root radio
+    socket rild-debug1 stream 660 radio system
     user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log net_raw diag
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
-service mmi-ril-daemon1 /system/bin/rild -c 2
+service ril-daemon2 /system/bin/rild -c 2
     class main
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
-    user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log net_raw diag
+    user roo
     disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
