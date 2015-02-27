@@ -156,7 +156,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 HAVE_SELINUX := true
 
 # SELinux
--include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/motorola/condor/sepolicy
@@ -166,8 +166,9 @@ BOARD_SEPOLICY_UNION += \
     atvc.te \
     batt_health.te \
     device.te \
-    file_contexts \
     file.te \
+    file_contexts \
+    hw_revs.te \
     init.te \
     init_shell.te \
     keystore.te \
