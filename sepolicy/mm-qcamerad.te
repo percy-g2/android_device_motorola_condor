@@ -1,3 +1,5 @@
+allow mm-qcamerad mpctl_socket:sock_file write;
+allow mm-qcamerad mpdecision:unix_stream_socket connectto;
 allow mm-qcamerad qdsp_device:chr_file { open read ioctl };
 allow mm-qcamerad system_server:unix_stream_socket { read write };
 allow servicemanager mm-qcamerad:dir search;
