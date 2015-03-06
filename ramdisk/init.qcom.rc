@@ -484,6 +484,11 @@ on boot
     setprop ro.hw.hwrev ${ro.boot.hwrev}
     setprop ro.hw.radio ${ro.boot.radio}
 
+    # Allow radio to access power state
+    chown system system /sys/power/state
+    chown radio system /sys/class/power_supply/usb/online
+    chmod 0755 /sys/class/power_supply/usb/online
+
 
 # Services start here
 
