@@ -459,6 +459,7 @@ on boot
     # Change ownership and permission for vibrator
     chown system system /sys/class/timed_output/vibrator/enable
     chmod 0660 /sys/class/timed_output/vibrator/enable
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
 
     # display color calibration
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal
