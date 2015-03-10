@@ -2,7 +2,6 @@
 #
 
 # Use reference RIL for initial bringup
-#rild.libpath=/system/lib/libreference-ril.so
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -14,10 +13,6 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-persist.radio.msgtunnel.start=false
-persist.radio.atfwd.start=false
 
 #
 # system props for the cne module
@@ -54,8 +49,7 @@ mm.enable.qcom_parser=37491
 vidc.debug.level=1
 
 # Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1
+camera2.portability.force_api=1
 
 #
 # system props for widevine
@@ -80,11 +74,6 @@ ro.opengles.version=196608
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=0
-
-# simulate sdcard on /data/media
-#
-persist.fuse_sdcard=true
-ro.crypto.fuse_sdcard=true
 
 #
 #snapdragon value add features
@@ -138,6 +127,8 @@ af.resampler.quality=4
 
 #disable tunnel mode playback by default
 audio.offload.disable=1
+av.streaming.offload.enable=false
+mm.enable.smoothstreaming=true
 
 #Buffer size in kbytes for compress offload playback
 audio.offload.buffer.size.kb=32
