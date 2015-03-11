@@ -84,6 +84,8 @@ on init
 on fs
 
     mount_all fstab.qcom
+    write /sys/kernel/boot_adsp/boot 1
+    
     swapon_all fstab.qcom
 
     # Mount PDS
