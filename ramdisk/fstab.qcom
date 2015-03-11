@@ -18,3 +18,5 @@
 /dev/block/platform/msm_sdcc.1/by-name/pds         /pds         ext3    rw,nosuid,noexec,barrier=1                       wait
 
 /devices/msm_sdcc.2/mmc_host                       auto         auto    defaults                                    voldmanaged=sdcard1:auto,noemulatedsd
+
+/dev/block/zram0 none swap defaults zramsize=536870912
