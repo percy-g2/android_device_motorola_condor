@@ -36,6 +36,10 @@
 # PDS
 /pds(/.*)?                                                  u:object_r:pds_file:s0
 
+# Firmware
+/fsg/condor_emea_dsds_5.img.gz                              u:object_r:condor_firmware:s0
+/fsg/0.img.gz                                               u:object_r:condor_firmware:s0
+
 # Sensors
 /dev/akm8963                                                u:object_r:sensors_device:s0
 /dev/akm8963_dev                                            u:object_r:sensors_device:s0

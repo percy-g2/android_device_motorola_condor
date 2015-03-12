@@ -6,3 +6,6 @@ allow rmt_storage kmem_device:chr_file rw_file_perms;
 allow rmt_storage self:capability sys_rawio;
 allow rmt_storage self:process execmem;
 allow rmt_storage ssd_device:blk_file { read write open };
+allow rmt_storage condor_firmware:file r_file_perms;
+allow rmt_storage fsg_file:dir search;
+allow rmt_storage fsg_file:file r_file_perms;

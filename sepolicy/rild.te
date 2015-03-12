@@ -2,4 +2,6 @@ allow rild sysfs_battery_supply:dir search;
 allow rild sysfs_battery_supply:file { open read };
 allow rild sysfs_usb_supply:dir search;
 allow rild sysfs_usb_supply:file { open read };
+allow rild fsg_file:dir search;
+allow rild fsg_file:file r_file_perms;
 
