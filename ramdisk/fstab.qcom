@@ -13,7 +13,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/userdata    /data        ext4    rw,discard,nodev,noatime,nodiratime,noauto_da_alloc,nobarrier    wait,check,encryptable=footer
 /dev/block/platform/msm_sdcc.1/by-name/cache       /cache       ext4    rw,nosuid,nodev,noatime,nodiratime,barrier=1   wait
 /dev/block/platform/msm_sdcc.1/by-name/fsg          /fsg         ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:fsg_file:s0                       wait,check
-/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware    ext4    ro,nosuid,nodev,barrier=0                                                      wait,check
+/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware    ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:firmware_file:s0                  wait,check
 /dev/block/platform/msm_sdcc.1/by-name/persist      /persist     ext4    defaults                                        wait
 /dev/block/platform/msm_sdcc.1/by-name/pds         /pds         ext3    rw,nosuid,noexec,barrier=1                       wait
 
