@@ -22,7 +22,7 @@ import java.io.File;
 
 public class DisplayColorCalibration {
 
-    private static final String KCAL_TUNING_FILE = "/sys/devices/virtual/graphics/fb0/kcal";
+    private static final String KCAL_TUNING_FILE = "/sys/devices/virtual/graphics/fb0/kcal_enable";
 
     public static boolean isSupported() {
         File file = new File(KCAL_TUNING_FILE);
@@ -30,7 +30,7 @@ public class DisplayColorCalibration {
     }
 
     public static int getMaxValue() {
-        return 255;
+        return 256;
     }
 
     public static int getMinValue() {
