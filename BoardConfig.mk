@@ -180,6 +180,7 @@ BOARD_SEPOLICY_UNION += \
     property.te \
     system_app.te \
     system_init.te \
+    system_server.te \
     rild.te \
     rmt_storage.te \
     thermal-engine.te \
