@@ -1,1 +1,2 @@
-add_lunch_combo cm_condor-userdebug
+add_lunch_combo aosp_condor-eng
+add_lunch_combo aosp_condor-userdebug

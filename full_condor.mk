@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from condor device
 $(call inherit-product, device/motorola/condor/device.mk)
 
-PRODUCT_NAME := full_condor
+PRODUCT_NAME := aosp_condor
 PRODUCT_DEVICE := condor
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := condor
